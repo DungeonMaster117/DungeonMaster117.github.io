@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	
+#gengar{
+	height: 150px;
+	width: 150px;
+	background-image: url(https://static.wikia.nocookie.net/pokemonunite/images/c/c6/Gengar_art.png/revision/latest?cb=20210805141820);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	transition: 1s;
+	display: inline-block;
+}
+
+#forest{
+	width: 100%;
+	height: 750px;
+	background-image: url(https://t4.ftcdn.net/jpg/03/53/84/79/360_F_353847951_JS90PIj6XChsLI9hBLEjptLbjRTVRKpb.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: -10;
+
+}
+
+body{
+		margin: 0%;
+}
+</style>
+</head>
+<body>
+
+<div id="gengar"></div>
+<div id="forest"></div>
+
+<script type="text/javascript">
+	document.addEventListener("mousemove" ,function(event){
+			gengar.style.top = event.clientY-75 + "px" 
+			gengar.style.left = event.clientX-75 + "px"
+		})
+</script>
+</body>
+</html>

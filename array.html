@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		#box{
+			background-color: red;
+			height: 100px;
+			width: 500px;
+			font-size: 80px;
+		}
+
+
+			#box3{
+	
+			height: 500px;
+			width: 500px;
+			background-size:contain;
+			background-repeat: no-repeat;
+				}
+	</style>
+</head>
+<body>
+
+<center>
+	<p>Click to discover your spirit Pokémon!</p>
+	<div id="box"></div>
+	<br>
+	<div id="box2"></div>
+	<div id="box3"></div>
+</center>
+
+<script type="text/javascript">
+	var Pokemon = ["Pikachu", "Bulbasaur", "Squirtle", "Charizard", "Jigglypuff", "Eevee"]
+	var explanation = ["You are bold and brave, and always stand up for what is right.", "You are peaceful and calm, and nature is of great importance to you.", "You're a bit mischievous, but in times of need you can be counted on.", "You have a bit of a temper, but once you get to know someone, you'd do anything for them.", "You're destined to be a star! You always make sure that your voice is heard.", "You're a but shy, but when needed, you can be flexible and adaptable."]
+	var images = ["https://static.wikia.nocookie.net/vsbattles/images/0/04/025Pikachu_XY_anime_4.png/revision/latest?cb=20180310153929", "https://shop7.webmodule.prestashop.net/pokedoge/11262-large_default/bulbasaur.jpg", "https://i.pinimg.com/originals/60/d9/26/60d92649b038dfcf3e1ead22de1b6d67.png", "https://static.wikia.nocookie.net/sonic-pokemon-unipedia/images/4/42/6-1.png/revision/latest/scale-to-width-down/1185?cb=20131031034331", "https://os-cdn.ec-ffmt.com/gl/pokemon/dedicate/pokedex/39.png", "https://static.wikia.nocookie.net/pokemon/images/8/88/Char-Eevee.png/revision/latest/scale-to-width/360?cb=20190625223735"]
+
+box.addEventListener("click", function(){
+	var random = Math.round(Math.random()*5);
+	box.innerText = Pokemon[random]
+
+	box2.innerText = explanation[random]
+	box3.style.backgroundImage = "url("+ images[random]+")";
+})
+</script>
+
+
+
+</body>
+</html>

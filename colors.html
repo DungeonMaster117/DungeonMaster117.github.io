@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+	body{
+		background-color:navy;
+	}
+	#coordinates{
+		width: 100px;
+		height: 100px;
+		background-color: white;
+		color: black;
+		opacity: 0.9;
+	}
+</style>
+	
+</head>
+<body>
+<div id="coordinates"></div>
+
+<script type="text/javascript">
+	document.addEventListener("click", function(event){console.log(event.clientX, event.clientY)
+
+	coordinates.innerText = event.clientX/2 + ", " + event.clientY/2
+
+	document.body.style.backgroundColor = "rgb(0," + event/clientX/2 + "," +event/clientY/2 + ")";
+	})
+</script>
+</body>
+</html>

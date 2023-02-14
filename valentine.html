@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	#box{
+			background-color: rgba(255, 0, 0, 1);
+			height: 500px;
+			width: 500px;
+			font-size: 75px;
+			z-index: 10;
+		}
+		#background{
+	width: 100%;
+	height: 750px;
+	background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9f4569fb-6125-46bd-90da-aa59f9934310/df5mjl9-faaeed85-d97e-4e32-aeb2-c4cfc81f283c.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzlmNDU2OWZiLTYxMjUtNDZiZC05MGRhLWFhNTlmOTkzNDMxMFwvZGY1bWpsOS1mYWFlZWQ4NS1kOTdlLTRlMzItYWViMi1jNGNmYzgxZjI4M2MuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xS6tmwOko50112Xr4RE3ZE8T2Evy3Eqo7yxfqI-rrFc);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+/*	z-index: -10;*/
+}
+
+#intro{
+	font-size: 30px;
+	color: aqua;
+}
+#thanks{
+	font-size: 30px;
+	color: aqua;
+}
+#jackson{
+	font-size: 30px;
+	color: aqua;
+}
+
+p{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+</style>
+
+</head>
+<body>
+
+<center>
+<div id ="background">
+
+
+	<p id ="intro">To Sebastian: Click to see things I love doing with you!</p>
+	<div id="box"></div>
+	<p id ="thanks">Thanks for being my friend! </p>
+	<br>
+	<p id ="jackson">-Jackson</p>
+
+</div>
+</center>
+	<script type="text/javascript">
+
+		var things = ["Fighting Level 9 CPUs in Super Smash Bros", "Watching Random comedy skits on YouTube", "Conspiracy theorizing about the dreaded Furbys", "Playing all sorts of board games", "Just hanging out"]
+
+		box.addEventListener("click", function(){
+	var random = Math.round(Math.random()*5);
+	box.innerText = things[random]
+	})
+
+	</script>
+
+</body>
+</html>

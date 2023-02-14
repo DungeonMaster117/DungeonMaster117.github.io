@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	#words{
+		height:100px;
+		width:100%;
+		background-color: white;
+		font-size: 50px;
+		text-align: center;
+		display: inline-block;
+
+	}
+	#block{
+		height: 550px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: inline-block;
+		background-image: url("https://globalnews.ca/wp-content/uploads/2022/02/20220210120252-37c869169e811e418f3dcbe51d0399969d3733060ca3b036766cbc9a943d0bb5.jpg?quality=85&strip=all")
+	}
+</style>
+</head>
+<body>
+<div id="words">
+	<p>Click on the picture to change the colors!</p>
+</div>
+<div id="block"></div>
+
+
+<script type="text/javascript">
+	block.addEventListener("click",
+		function(event){
+			block.style.filter = "hue-rotate(" + Math.round(360*Math.random()) +"deg)";
+		})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+<style type="text/css">
+	
+#pikachu{
+	background-image: url("https://static.wikia.nocookie.net/pokemon/images/6/6c/Char-pikachu.png/revision/latest/scale-to-width/360?cb=20190430034300");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 300px;
+	height: 300px;
+	left: 500px;
+	position: absolute;
+}
+
+#berry{
+	background-image: url("https://static.wikia.nocookie.net/pokemon/images/c/c3/RazzBerry-GO.png/revision/latest/scale-to-width-down/256?cb=20170313125826");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+	position:absolute;
+}
+
+#heart1{
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Love_Heart_symbol.svg/2250px-Love_Heart_symbol.svg.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	left: 380px;
+	top: 50px;
+	opacity:0;
+}
+
+
+#heart2{
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Love_Heart_symbol.svg/2250px-Love_Heart_symbol.svg.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	left: 720px;
+	top: 90px;
+	opacity:0;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div id="pikachu"></div>
+<div id="berry"></div>
+<div id="heart1"></div>
+<div id="heart2"></div>
+
+
+<script type="text/javascript">
+	
+	function berryFollowMouse () {
+
+			berry.style.position= "absolute"
+		berry.style.left= event.clientX-40 +"px"
+		berry.style.top= event.clientY-40 +"px"
+		}
+
+ //this is the function that makes the berry follow the mouse on click
+
+var click = 0;
+
+function seeHearts(){
+		heart1.style.opacity = "1"
+		heart2.style.opacity = "1"
+
+	}
+	
+	berry.addEventListener("click", function(){
+
+		click = click +1;
+		if (click%2 == 1) {
+			document.addEventListener("mousemove", 
+			berryFollowMouse)
+
+			pikachu.addEventListener("mousemove", seeHearts)
+			
+		}
+
+		 if (click%2 == 0) {
+				document.removeEventListener("mousemove", berryFollowMouse)
+				pikachu.removeEventListener("mousemove", seeHearts)
+
+				console.log(click)
+
+		}
+
+
+
+
+	})
+
+	
+</script>
+
+
+
+</body>
+</html>

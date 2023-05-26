@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<!-- I am making a dot that follows the mouse -->
+
+<style type="text/css">
+	
+	#circle{
+		width:50px;
+		height: 50px;
+		background-color: purple;
+		border-radius: 50%;
+		position: absolute;
+		transition: 1s;
+	}
+</style>
+
+
+</head>
+<body>
+
+
+<div id="circle"></div>
+
+
+<script type="text/javascript">
+	
+	document.addEventListener("mousemove" ,function(event){
+			circle.style.top = event.clientY + "px" 
+			circle.style.left = event.clientX + "px"
+		})
+
+	function changeColor (){
+		var x = 100
+		var y = 200
+		var z = 150
+		circle.style.backgroundColor = "rgb("+x+","+y+","+z+")"
+	}
+
+</script>
+
+
+</body>
+</html>

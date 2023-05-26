@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.fish{
+			width:100px;
+			height:100px;
+			background-image:url("https://shop7.webmodule.prestashop.net/pokedoge/11774-large_default/magikarp.jpg");
+			background-size:contain;
+			background-repeat:no-repeat;
+			position: absolute;
+			transition: 5s;
+		}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function makeMagikarp (){
+		var magikarp = document.createElement("div")
+		document.body.appendChild(magikarp)
+		magikarp.classList.add('fish')
+		function move(){
+		magikarp.style.left = Math.random()*1500+"px"
+		magikarp.style.top = Math.random()*750+"px"
+	}
+	var timing = Math.round(Math.random()*2000)
+	setInterval(move, timing)
+			}
+
+	for(var i = 0; i<100; i=i+1){
+		makeMagikarp()
+	}
+</script>
+
+</body>
+</html>
